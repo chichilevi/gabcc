@@ -1,0 +1,33 @@
+            <!-- start team section -->
+            <section class="foholic_team team_staff" id="chef_team">
+                <div class="container">
+                    <h2 class="d-none">hidden</h2>
+                    <div class="specialities-top text-center">
+                        <div class="row">
+                            <h3 class="d-none">hidden</h3>
+                            {% for teamdata in teamdatas %}
+                            <div class="col-12 col-md-6 col-lg-4 m-30">
+                                <div class="carousel_imges_item hover-effect-img">
+                                    <div class="hover-icons">
+                                        <a href="https://www.facebook.com/" class="in-social slide-left" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="https://twitter.com/" class="in-social" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="https://www.instagram.com/" class="in-social slide-right" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                    </div>
+                                    <div class="carousel-img swipe_gallery_img" >
+                                        <img src="{{ teamdata.image }}" alt="chef-img-1">
+                                    </div>
+                                    <div class="hover-effect the-team"></div>
+                                    <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdropteam">
+                                        <div class="team-box">
+                                            <span>{{ teamdata.name }}</span>  
+                                            <p>{{ teamdata.job }}</p>                              
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endfor %}  
+                        </div>                      
+                    </div>
+                </div>
+            </section>
+            <!-- end team section -->

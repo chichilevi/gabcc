@@ -1,0 +1,53 @@
+                <!-- start team section -->
+                <section class="foholic_team" id="team">
+                    <div class="timeline-tag">
+                        <div class="intro-years text-center">
+                            <div class="celebrate_title">Celebrating</div>
+                            <h3 class="fast-counter" data-number="10">10</h3>
+                            <div class="years">Years</div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="specialities-top text-center">
+                            <span class="wow fadeInDown" data-wow-duration="2s" data-wow-delay=".3s">Meet the Team</span>
+                            <h4 class="foholic_title dark_head  wow fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s">The Best Staff</h4>
+                            <p class="col-12 col-lg-8 col-md-10 m-auto">
+                            Our Medical staffs have extensive experience in Oncology and Chemotherapy, 
+                            and we are aware of the need of clients returning to normality.
+                            We offer full spectrum specialised Oncology services.</p>
+
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                {% for teamdata in teamdatas %}
+                                    <div class="col-12 col-md-4 col-lg-4 swiper-slide">
+                                        <div class="carousel_imges_item hover-effect-img">
+                                            <div class="hover-icons">
+                                                <a href="https://www.facebook.com/" class="in-social slide-left" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                                                <a href="https://twitter.com/" class="in-social" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                                                <a href="https://www.instagram.com/" class="in-social slide-right" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                            </div>
+                                            <a href="/staff">
+                                                <div class="carousel-img swipe_gallery_img" >
+                                                    <img src="{{ teamdata.image }}" alt="chef-img-1">
+                                                </div>
+                                                <div class="hover-effect the-team"></div>
+                                                <a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#staticBackdropteam">
+                                                    <div class="team-box">
+                                                        <span>{{ teamdata.name }}</span>  
+                                                        <p>{{ teamdata.job }}</p>                              
+                                                    </div>
+                                                </a>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {% endfor %}                                     
+                                </div>
+                            </div> 
+                                
+                        </div>
+                        <div class="foholic_button text-center">
+                            <a href="/staff" class="button-light">Meet Our Entire Team</a>
+                        </div> 
+                    </div>
+                </section>
+                <!-- end team section -->
